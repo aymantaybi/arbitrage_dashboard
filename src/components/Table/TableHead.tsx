@@ -1,11 +1,13 @@
 import React from 'react'
-import '../styles.css';
+import '../../styles.css';
 
-function TableHead() {
+function TableHead(props: any) {
+
+    const { children, style } = props
 
     return (
-        <div className={"tableHead"} >
-            
+        <div className={"tableHead"} {...{ style }} >
+            {children}
         </div>
     )
 }

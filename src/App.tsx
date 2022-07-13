@@ -1,16 +1,38 @@
 import React, { useState } from 'react';
-
+import Table, { TableBody, TableCell, TableHead, TableRow } from './components/Table';
 import './App.css';
-import Table from './components/Table';
 
 
 function App() {
 
-  const [counter, setCounter] = useState(500000);
-
   return (
     <div className="App">
-      <Table counter={counter} />
+      <Table >
+        <TableHead>
+          <TableCell>
+            Time
+          </TableCell>
+          <TableCell>
+            Side
+          </TableCell>
+          <TableCell>
+            Amount
+          </TableCell>
+        </TableHead >
+        <TableBody>
+          <TableRow>
+            <TableCell >
+              10:09:56
+            </TableCell>
+            <TableCell>
+              BUY
+            </TableCell>
+            <TableCell>
+              100 ETH
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </div>
   );
 }
