@@ -4,6 +4,8 @@ import Decimal from 'decimal.js';
 import './App.css';
 
 import data from './data.json';
+import Input from './components/Input';
+import Calculator from './components/Calculator';
 
 interface Trade {
   blockNumber: string,
@@ -20,7 +22,7 @@ function App() {
 
   useEffect(() => {
 
-    (async () => {
+    /* (async () => {
 
       var response = await fetch("http://127.0.0.1:6969/api/trades?limit=3");
 
@@ -30,13 +32,25 @@ function App() {
 
       setTrades([...responseJson.data])
 
-    })()
+    })() */
 
   }, [])
 
   return (
     <div className="App">
-      <Table >
+
+      <Calculator />
+
+
+
+    </div>
+  );
+}
+
+export default App;
+
+
+{/* <Table >
         <TableHead>
           <TableCell>
             Block Number
@@ -77,9 +91,4 @@ function App() {
             )
           })}
         </TableBody>
-      </Table>
-    </div>
-  );
-}
-
-export default App;
+      </Table> */}
